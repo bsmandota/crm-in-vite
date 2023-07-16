@@ -3,6 +3,7 @@ import Sidebar from "../components/Sidebar";
 import { Modal, Button } from "react-bootstrap";
 import  {fetchTicket, ticketUpdation } from "../api/tickets";
 import fetchUser,{userUpdation} from '../api/users';
+import { ExportCsv, ExportPdf } from "@material-table/exporters";
 import { useEffect, useState } from "react";
 import Widget from "../components/widget";
 const columns = [
@@ -464,8 +465,6 @@ export default function Admin() {
                   label: "Export Csv",
                   exportFunc: (cols, data) =>
                     ExportCsv(cols, data, "userRecords")
-                      .then((response) => console.log(response))
-                      .catch((error) => console.log(error)),
                 },
               ],
             }}
