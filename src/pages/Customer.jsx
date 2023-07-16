@@ -1,8 +1,7 @@
 import { useState, useEffect } from "react";
 import Sidebar from "../components/Sidebar";
 import Widget from "../components/widget";
-import ExportCsv from "@material-table/exporters/csv";
-import ExportPdf from "@material-table/exporters/pdf";
+import { ExportCsv, ExportPdf } from "@material-table/exporters";
 import MaterialTable from "@material-table/core";
 import { Modal, Button } from "react-bootstrap";
 import { ticketCreation } from "../api/tickets";
@@ -180,8 +179,6 @@ function Customer() {
                   label: "Export Csv",
                   exportFunc: (cols, data) =>
                     ExportCsv(cols, data, "ticketRecords")
-                      .then((response) => console.log(response))
-                      .catch((error) => console.log(error)),
                 },
               ],
             }}

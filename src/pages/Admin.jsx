@@ -1,8 +1,6 @@
 import MaterialTable from "@material-table/core";
 import Sidebar from "../components/Sidebar";
 import { Modal, Button } from "react-bootstrap";
-import ExportCsv from "@material-table/exporters/csv";
-import ExportPdf from "@material-table/exporters/pdf";
 import  {fetchTicket, ticketUpdation } from "../api/tickets";
 import fetchUser,{userUpdation} from '../api/users';
 import { useEffect, useState } from "react";
